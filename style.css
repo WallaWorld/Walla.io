@@ -14,7 +14,7 @@
   --transition: all .3s ease;
   --transition2: all .5s ease-in-out;
   --border: 2px solid rgb(161, 213, 230);
-  --border2: 3px solid rgb(161, 213, 230);
+  --border2: 3px solid var(--ylw-clr);
   --border3: 4px solid rgba(101, 126, 34, 0.651);
   --border3a: 3px solid rgba(101, 126, 34, 0.651);
   --boxradius: 11px;
@@ -132,9 +132,15 @@ header .container nav .navbar .navitem a {
 header .container nav .navbar .navitem:hover, header .container nav .navbar .navitem.active {
   transform: translateY(13px);
   background-color: var(--bg1-clr);
+  border: var(--border2);
 }
 header .container nav .navbar .navitem:hover a, header .container nav .navbar .navitem.active a {
-  color: var(--ylw-clr);
+  color: var(--border3b);
+}
+@media screen and (max-width: 750px) {
+  header .container nav .navbar .navitem:hover, header .container nav .navbar .navitem.active {
+    transform: translateX(-11px);
+  }
 }
 header .container .mobile-toggle {
   width: var(--size-700);
@@ -170,10 +176,10 @@ header .container .mobile-toggle.active {
     position: relative;
     grid-template-rows: auto;
     background-color: var(--ylw-clr);
-    margin-bottom: 10px;
+    margin-bottom: 13px;
   }
   header .navbar .navitem:hover, header .navbar .navitem.active {
-    transform: translateX(3px);
+    transform: translateX(-11px);
   }
   header .navbar.show {
     left: 0;
