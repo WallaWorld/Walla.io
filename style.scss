@@ -938,7 +938,18 @@ header {
     }
 
 }
-
+ @media screen and (max-width:750px) {
+    #featuring {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        overflow: hidden;
+    }
+    .mine {
+        
+        width: 180px;
+        height: 220px;
+    }
+ }
 // footer section
 footer {
     position: relative;

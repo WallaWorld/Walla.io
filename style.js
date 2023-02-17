@@ -92,7 +92,7 @@ function sidebar() {
     options.classList.toggle('active2');
 }
 // strapGang
-let strap_song =[
+let All_song =[
     {
         name: "Jipee",
         path: "assets/audio/JIPEE.mp3",
@@ -103,9 +103,9 @@ let strap_song =[
         path: "assets/audio/LLLIT.mp3",
         singer: "Mic-Key, Modeeh & Jus"
     },
-]
-// topBoyz
-let topboyz_song =[
+
+    // topBoyz
+    
     {
         name: "",
         path: "assets/audio/",
@@ -116,9 +116,9 @@ let topboyz_song =[
         path: "assets/audio/",
         singer: "TopBoyz"
     },
-]
-// noteez
-let noteez_song =[
+
+    // noteez
+
     {
         name: "Players",
         path: "assets/audio/NOTEEZ_Players.mp3",
@@ -129,9 +129,9 @@ let noteez_song =[
         path: "assets/audio/jigsaw.mp3",
         singer: "Noteez & Mr Ree"
     },
-]
-// goke
-let goke_song =[
+
+    // goke
+
     {
         name: "Don't Go",
         path: "assets/audio/dont_go.mp3",
@@ -142,9 +142,9 @@ let goke_song =[
         path: "assets/audio/",
         singer: "Goke"
     },
-]
-// Mr Ree
-let mrree_song =[
+
+// Mr Ree 
+
     {
         name: "",
         path: "assets/audio/",
@@ -155,9 +155,9 @@ let mrree_song =[
         path: "assets/audio/",
         singer: "Mr Ree"
     },
-]
-// mic_key
-let mic_key_song =[
+
+    // mic_key
+
     {
         name: "",
         path: "assets/audio/",
@@ -168,9 +168,9 @@ let mic_key_song =[
         path: "assets/audio/",
         singer: "Mic_key"
     },
-]
+
 // modeeh
-let modeeh_song =[
+
     {
         name: "",
         path: "assets/audio/",
@@ -181,9 +181,9 @@ let modeeh_song =[
         path: "assets/audio/",
         singer: "Modeeh"
     },
-]
+
 // DecVid
-let DecVid_song =[
+
     {
         name: "Madiaba",
         path: "assets/audio/Madiaba.mp3",
@@ -194,9 +194,9 @@ let DecVid_song =[
         path: "assets/audio/",
         singer: "DechVid"
     },
-]
+
 // suseh
-let suseh_song =[
+
     {
         name: "Fifty",
         path: "assets/audio/fifty.mp3",
@@ -207,9 +207,9 @@ let suseh_song =[
         path: "assets/audio/",
         singer: "Suseh"
     },
-]
+
 // jus
-let jus_song =[
+
     {
         name: "Grace",
         path: "assets/audio/grace.mp3",
@@ -220,9 +220,9 @@ let jus_song =[
         path: "assets/audio/influenced.mp3",
         singer: "Jus"
     },
-]
+
 // timber
-let timber_song =[
+
     {
         name: "Sena Alwanyi",
         path: "assets/audio/sena_alwanyi.mp3",
@@ -233,4 +233,5 @@ let timber_song =[
         path: "assets/audio/",
         singer: "Timber"
     },
+
 ]
