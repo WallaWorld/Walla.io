@@ -7,7 +7,7 @@
 --teal-clr: teal;
 --blk-clr: black;
 --bg-clr: #222 ;
---bg1-clr: #777;
+--bg1-clr: #7777778e;
 --bg2-clr: rgb(79, 118, 98);
 // box shadows
 --shadow: 3px 7px 2px 1px #899690;
@@ -60,6 +60,13 @@
     --size-700: 3rem;
     --size-800: 4rem;
     --size-900: 5rem;
+    // breakpoint
+    --breakpoint-xs: 0;
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px;
+    --breakpoint-xxl: 1600px;
 }
 
 * {
@@ -108,6 +115,7 @@ header {
     box-shadow: 2px 1px 8px var(--teal-clr);
 
     .container {
+        position: relative;
         width: 100%;
         height: 4rem;
         background-color: var(--blk-clr);;
@@ -130,6 +138,7 @@ header {
             .navbar {
                 display: flex;
                 align-items: center;
+                transition: .5s ease;
 
                 .navitem {
                     margin-right: 10px;
@@ -156,6 +165,36 @@ header {
                         }
                     }
                 }
+                .dropdown{
+                    transition: transform .5s ease;
+                    .dropdown-menu {
+                        display: none;
+                        position: absolute;
+                        top: 40px;
+                        left: 0;
+                        width: fit-content;
+
+                        .dropdown-item {
+                            width: fit-content;
+                            
+
+                            a {
+                                color: var(--ylw-clr);
+                            }
+
+                            &:hover {
+                                transform: translateX(5px);
+                            }
+                        }
+                        
+                    }
+                    &:hover {
+                        .dropdown-menu {
+                            display: block;
+                        } 
+                    }
+                }
+                
             }
         }
 
@@ -206,6 +245,32 @@ header {
             }
             &.show {
                 left: 0;
+            }
+            .dropdown{
+                transition: transform .5s ease;
+                .dropdown-menu {
+                    left: 100px;
+                    
+
+                    .dropdown-item {
+                        left: 100px;
+                    
+
+                        a {
+                            color: var(--ylw-clr);
+                        }
+
+                        &:hover {
+                            transform: translateX(5px);
+                        }
+                    }
+                    
+                }
+                &:hover {
+                    .dropdown-menu {
+                        display: block;
+                    } 
+                }
             }
         }
 
@@ -268,13 +333,25 @@ header {
 
 
                 h2 {
-                    font-size: var(--size-600);
-                    font-weight: 100;
+                    text-transform: capitalize;
+                    a{
+                        font-size: var(--size-600);
+                        font-weight: 100;
+                        color: var(--wht-clr);
+
+                        &:hover{
+                            color: var(--ylw-clr);
+    
+                        }
+                    }
+                    
                 }
 
                 p {
                     font-size: var(--size-400);
                     font-weight: 400;
+                    font-family: cursive;
+
                 }
 
             }
@@ -335,8 +412,51 @@ header {
             }
         }
     }
+
+    @media screen and (max-width:750px){
+        .slider {
+            width: 100%;
+        }
+    }
 }
 // about 
+#abt {
+
+    .studio{
+        p{}
+        .studioimg{}
+    }
+    .leadership{
+        h2{}
+        p{}
+        h3{}
+        .brd{
+            img{}
+        }
+    }
+    .forart{
+        .artist{
+            h2{}
+            p{}
+            .offers{
+                h2{}
+                .audio{
+                    img{}
+                    span{}
+                }
+                .beat{
+                    img{}
+                    span{}
+                }
+                .visual{
+                    img{}
+                    span{}
+                }
+            }
+        }
+    }
+}
+
 // featuring
 #featuring {
     display: flex;
