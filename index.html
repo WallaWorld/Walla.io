@@ -14,6 +14,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- jquery link-->
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <!-- bootstrap cdn links -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script> -->
+
 </head>
 <body>
     <header>
@@ -23,12 +28,25 @@
             </div>
             <nav>
                 <ul class="navbar">
-                    <li class="navitem active"><a href="#" class="item">home</a></li>
-                    <li class="navitem"><a href="#" class="item">music</a></li>
-                    <li class="navitem"><a href="#" class="item">gallery</a></li>
-                    <li class="navitem"><a href="#" class="item">about</a></li>
-                    <li class="navitem"><a href="#" class="item">get intouch</a></li>
+                    <li class="navitem active"><a href="index.html" class="item">home</a></li>
+                    <li class="navitem"><a href="gallery.html" class="item">gallery</a></li>
+                    <li class="navitem dropdown"><a href="about.html" class="item">about</a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-item"><a  href="#walart">Walla's Artist</a></li>
+                            <div class="dropdown-divider"></div>
+                            <li class="dropdown-item"><a  href="#offers">For Artists</a></li>
+                        </ul>
+                    </li>
+                    <li class="navitem dropdown"><a href="playlist.html" class="item">playlist</a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-item"><a  href="#podcast">podcast</a></li>
+                            <div class="dropdown-divider"></div>
+                            <li class="dropdown-item"><a href="#music">music</a></li>
+                        </ul>
+                    </li>
+                    <li class="navitem"><a href="contact.html" class="item">contact</a></li>
                 </ul>
+                
             </nav>
             <div class="mobile-toggle" id="mobilemenu" onclick="ToggleMenu()">
                 <label id="icon" class="mobile-nav-toggle"aria-controls="primary-navigation"
@@ -92,16 +110,20 @@
             <!-- 
                 1.studio
                 2.leadership structure
-                3.location
+                3.for Artists
                 read more...
              -->
             <div class="studio">
                 <p>WallaWrld is an upcoming  recording studio, Having a presence online should be the first port of call for any outreach. <br>
                      A clean and navigable website, with images and descriptions, and a clear direction of how to contact the studio and book is very important and should become a regular source of enquiry. <br>
                      We have a variety of projects that reflect well on the studio, and give an indication of the type of work We regularly do and can facilitate in the space.</p>
+
+                <div class="studioimg">
+                    
+                </div>
             </div>
 
-            <div class="leadrs">
+            <div class="leadership">
                 <h2>History</h2>
                 <p>WallaWrld is a recording studio that started with Antony kimani, a sound engineer and the main producer in WallaWrld. </p>
                 <h3>WallaWrld's leadership consists of four persons:-</h3>
@@ -109,7 +131,24 @@
                     <img src="" alt="">
                 
                 </div>
-            </div>        
+            </div>
+            
+            <div class="forart">
+                <div class="artist">
+                    <h2>Work with Walla</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem, cum velit!
+                        Saepe cumque doloremque sint reprehenderit voluptatem quod necessitatibus deleniti nobis labore culpa! Praesentium!
+                    </p>
+                    <div class="offers">
+                        <h2>audio recording</h2>
+                        <p class="audio"><img src="" alt="audio recording"><span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod quis non, minus vero assumenda dignissimos labore quasi explicabo exercitationem. Quibusdam deleniti esse sapiente fuga assumenda? Dolorem, porro.</span></p>
+                        <h2>custom beats</h2>
+                        <p class="beat"><img src="" alt="custom beats"><span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod quis non, minus vero assumenda dignissimos labore quasi explicabo exercitationem. Quibusdam deleniti esse sapiente fuga assumenda? Dolorem, porro.</span></p>
+                        <h2>build visuals</h2>
+                        <p class="visual"><img src="" alt="visuals"><span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod quis non, minus vero assumenda dignissimos labore quasi explicabo exercitationem. Quibusdam deleniti esse sapiente fuga assumenda? Dolorem, porro.</span></p>
+                    </div>
+                </div>
+            </div>
         </section>
         <!--feature section -->
         <section id="featuring">
@@ -381,5 +420,11 @@
 
     <script src="style.js"></script>
     <script src="player.js"></script>
+    <script>
+        $('#navId a').click(e => {
+            e.preventDefault();
+            $(this).tab('show');
+        });
+    </script>
 </body>
 </html>
